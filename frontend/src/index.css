@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  font-size: 50px;
+  color: rgb(88, 194, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body {
+  background-image: url('/Images/cat_dog.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  gap: 350px;
+}
+
+.text-container .winner-text {
+  font-size: 40px;
+  color: rgb(251, 255, 0);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.winner-text {
+  visibility: hidden;
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(88, 194, 255);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  height: 45px;
+}
+
+.winner-text.show {
+  visibility: visible;
+}
+
+.winner-text:first-of-type {
+  margin-right: 180px;
+}
+
+.winner-text:last-of-type {
+  margin-left: 180px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 10px;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(170, 170, 170);
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.text-between {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  max-width: 200px;
+}
+
+.text-between .top-text {
+  font-size: 50px;
+  color: rgb(88, 194, 255);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  
+}
+
+.text-between .bottom-text {
+  font-size: 30px;
+  color: rgb(88, 194, 255);
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.0);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 810px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  background-color: rgb(88, 194, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-container button:hover {
+  background-color: rgb(70, 160, 220);
+}
+
+.buttons-container button.middle-button {
+  visibility: hidden;
+}
+
+.buttons-container button.middle-button.show {
+  visibility: visible;
+}
+
+.buttons-container.middle-button-visible {
+  gap: 100px;
+}
+
+.image-box.yellow-box {
+  background-color: yellow;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  width: 99%;
+  font-size: 20px;
+  gap: 1300px;
+}
+
+.dog-wins {
+  color: rgb(125, 203, 255);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cat-wins {
+  color: rgb(125, 203, 255);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
